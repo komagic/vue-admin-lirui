@@ -15,7 +15,7 @@ function resolve(dir: string) {
 
 export default (): UserConfig => {
 	// 根据不同环境，设置不同的相对路径
-	const base_path ='/';
+	const base_path = process.env.NODE_ENV === 'development' ? "/":"./";
 
 
 	return {
