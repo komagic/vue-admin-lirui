@@ -14,9 +14,8 @@ function resolve(dir: string) {
 // https://vitejs.dev/config
 
 export default (): UserConfig => {
-	console.log('process.env',process.env);
 	// 根据不同环境，设置不同的相对路径
-	const base_path = process.env.NODE_ENV === 'development' ? "/":"/dist";
+	const base_path ='/';
 
 
 	return {
