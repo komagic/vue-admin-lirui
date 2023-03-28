@@ -3,6 +3,7 @@
 set -x # 这里是为了看错误日志
 
 # 打包项目
+rm -rf dist
 npm run build
 
 # 进入打包后的文件夹

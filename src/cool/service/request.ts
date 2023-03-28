@@ -18,11 +18,6 @@ const request = axios.create({
 // replace the origin of the request url by the 127.2.2.1
 request.interceptors.request.use(
 	(config: AxiosInterceptorOptions) => {
-		if (process.env.NODE_ENV === "production") {
-			config.baseURL = "http://150.158.147.122:8001";
-			config.url = config.url?.replace(/^\/api/, "");
-			console.log("config.url", config.url, config.baseURL);
-		}
 		return config;
 	},
 	(error) => {
