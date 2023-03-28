@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -x  # 这里是为了看错误日志
+set -x # 这里是为了看错误日志
 
 # 打包项目
 npm run build
@@ -14,4 +14,4 @@ git commit -m 'auto deploy'
 
 # 将打包后的文件推送到指定分支
 
-git push -f git@github.com:komagic/vue-admin-lirui.git main:static-pages
+git push -f git@gitee.com:komagic1/oa-system-main-front.git main:static-pages
