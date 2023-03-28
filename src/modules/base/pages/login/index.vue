@@ -5,7 +5,7 @@
 				<img src="/logo.png" alt="Logo" />
 				<span>{{ app.info.name }}</span>
 			</div>
-			<p class="desc">''</p>
+			<p class="desc"></p>
 
 			<el-form label-position="top" class="form" :disabled="saving">
 				<el-form-item label="用户名">
