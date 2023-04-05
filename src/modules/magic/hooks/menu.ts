@@ -93,7 +93,8 @@ export function useCode() {
 
 		// 请求地址
 		const paths = api.map((e) => e.path);
-
+		console.log('perms',perms);
+		
 		// 权限
 		const perms = {
 			add: paths.includes("/add"),

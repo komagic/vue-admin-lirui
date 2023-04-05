@@ -1191,6 +1191,14 @@ declare namespace Eps {
 
 	interface CustomerRecords {
 		/**
+		 * getDepartmentUsers
+		 */
+		getDepartmentUsers(data?: any): Promise<any>;
+		/**
+		 * checkUnique
+		 */
+		checkUnique(data?: any): Promise<any>;
+		/**
 		 * delete
 		 */
 		delete(data?: any): Promise<any>;
@@ -1222,6 +1230,8 @@ declare namespace Eps {
 		 * 权限标识
 		 */
 		permission: {
+			getDepartmentUsers: string;
+			checkUnique: string;
 			delete: string;
 			update: string;
 			info: string;
@@ -1233,6 +1243,8 @@ declare namespace Eps {
 		 * 权限状态
 		 */
 		_permission: {
+			getDepartmentUsers: boolean;
+			checkUnique: boolean;
 			delete: boolean;
 			update: boolean;
 			info: boolean;
