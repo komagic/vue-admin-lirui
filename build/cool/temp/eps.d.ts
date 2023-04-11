@@ -476,6 +476,14 @@ declare namespace Eps {
 		 */
 		invoice_status?: number;
 		/**
+		 * 提成比例
+		 */
+		commission_ratio?: number;
+		/**
+		 * 提成总额
+		 */
+		commission_total?: number;
+		/**
 		 * 创建时间
 		 */
 		createTime?: Date;
@@ -563,6 +571,14 @@ declare namespace Eps {
 		 */
 		invoice_status?: number;
 		/**
+		 * 提成比例
+		 */
+		commission_ratio?: number;
+		/**
+		 * 提成总额
+		 */
+		commission_total?: number;
+		/**
 		 * 创建时间
 		 */
 		createTime?: Date;
@@ -585,6 +601,10 @@ declare namespace Eps {
 		 * 产品id
 		 */
 		product_id?: number;
+		/**
+		 * 产品名称
+		 */
+		productName?: string;
 		/**
 		 * 配置比例
 		 */
@@ -2013,13 +2033,13 @@ declare namespace Eps {
 
 	interface CustomerOrders {
 		/**
+		 * 查重
+		 */
+		update(data?: any): Promise<any>;
+		/**
 		 * 删除
 		 */
 		delete(data?: any): Promise<any>;
-		/**
-		 * 修改
-		 */
-		update(data?: any): Promise<any>;
 		/**
 		 * 单个信息
 		 */
@@ -2033,7 +2053,7 @@ declare namespace Eps {
 			[key: string]: any;
 		}>;
 		/**
-		 * 新增
+		 * 创建订单
 		 */
 		add(data?: any): Promise<any>;
 		/**
@@ -2044,8 +2064,8 @@ declare namespace Eps {
 		 * 权限标识
 		 */
 		permission: {
-			delete: string;
 			update: string;
+			delete: string;
 			info: string;
 			page: string;
 			add: string;
@@ -2055,8 +2075,8 @@ declare namespace Eps {
 		 * 权限状态
 		 */
 		_permission: {
-			delete: boolean;
 			update: boolean;
+			delete: boolean;
 			info: boolean;
 			page: boolean;
 			add: boolean;
